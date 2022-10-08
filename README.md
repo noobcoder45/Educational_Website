@@ -72,15 +72,12 @@ Note:If the server runs into a problem restart the server with the same command.
       Sign in with appropriate credentials and you will be redirected to homepage.
       <br>
       <img src="images/homepage_admin.png" alt="Logo" width="1000" height="250">   
-      <br>
     </li>
-  
     <li>
       Select the subject, navigate to the desired chapter, select one of the options from Notes, Worksheets, Revision
       And you will see the download links of the files uploaded.  
       <br>
       <img src="images/download.png" alt="Logo" width="1000" height="250">   
-      <br>
     </li>
     <li>
       Discussions:
