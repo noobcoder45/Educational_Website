@@ -49,6 +49,7 @@ Note:If the server runs into a problem restart the server with the same command.
       <br>
     </li>
       Select the subject, navigate to the desired chapter, select one of the options from Notes, Worksheets, Revision
+      Note:Only implemented for Maths and select those chapters with no spaces
       And you will see the download links of the files uploaded and an option to upload new files
       <br
       <img src="images/chapter.png" alt="Logo" width="1000" height="250">   
