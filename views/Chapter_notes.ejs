@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <h1>Notes</h1>
+  <% for(let i=0; i<notes.length;i++){ %>
+   <a class="list-group-item" href=<%= notes[i] %> download>download</a>
+  <% } %>
+  <% if(admin){ %>
+    <div class="container">
+        <form action="/upload_material" method="post" enctype="multipart/form-data">
+            <div class="input-group">
+                <label for='name'>material</label>
+                <input name=<%= subject+"/"+chapter+"/"+"Notes" %> type="file" />
+            <button class="submit-btn" type='submit'>Upload</button>
+            </div>
+        </form>
+  </div>
+  <% } %>
+  </body>
+</html>
+<!-- %= notes[i] %> -->

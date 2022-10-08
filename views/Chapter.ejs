@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title></title>
+      </head>
+      <body>
+        <% if(admin){ %>
+          <% var path="/admin/material/" %>
+        <% } else{ %>
+          <% var path="/maths/" %>
+        <% } %>
+        <h1><%= chapter %></h1>
+        <form action=<%= path+chapter+"/Notes/"+id %> method="post">
+         <button type="submit" class="Chapter_go btn btn-primary stretched-link">Notes</button>
+       </form>
+       <form action=<%= path+chapter+"/Revision/"+id %> method="post">
+        <button type="submit" class="Chapter_go btn btn-primary stretched-link">Revision Sheet></button>
+      </form>
+      <form action=<%= path+chapter+"/Worksheets/"+id %> method="post">
+       <button type="submit" class="Chapter_go btn btn-primary stretched-link">Worksheets</button>
+     </form>
+      </body>
+    </html>
+  </body>
+</html>

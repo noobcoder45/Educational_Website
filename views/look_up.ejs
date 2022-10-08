@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <img src=<%= route %>>
+    <p><%= description %></p>
+    <div class="">
+      <ul class="list-group">
+      </ul>
+    </div>
+    <form action=<%= "/post_answer/"+id %> method="post">
+      <label>Add image:</label>
+      <br>
+      <input name="answer" type="file">
+      <br>
+      <input type="hidden" name="question">
+      <textarea name="answer" rows="5" cols="30"  placeholder="description"></textarea>
+      <br>
+      <button type="submit">POST</button>
+    </form>
+  </body>
+</html>

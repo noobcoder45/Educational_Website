@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="/class_upload" method="post">
+      <input type="text" name="link" placeholder="link">
+      <input type="date" name="date" placeholder="date">
+      <input type="time" name="time" placeholder="time">
+      <input type="text" name="description" placeholder="description">
+      <select name="group">
+        <option value=0>none</option>
+        <option value=11>11th</option>
+        <option value=12>12th</option>
+        <option value=13>revision</option>
+      </select>
+      <select name="students" multiple>
+        <option value="none">none</option>
+        <optgroup label="11">
+          <% students.forEach(function(student){ %>
+            <% if(student.Class===11){ %>
+            <option value=<%= student.id %> >student.name</option>
+          <% } %>
+          <% }) %>
+        </optgroup>
+        <optgroup label="12">
+          <% students.forEach(function(student){ %>
+            <% if(student.Class===12){ %>
+            <option value=<%= student.id %> ><%= student.Name %></option>
+          <% } %>
+          <% }) %>
+        </optgroup>
+        <optgroup label="revision">
+          <% students.forEach(function(student){ %>
+            <% if(student.Class===13){ %>
+            <option value=<%= student.id %> >student.name</option>
+          <% } %>
+          <% }) %>
+        </optgroup>
+      </select>
+      <button type="submit" name="button">post</button>
+    </form>
+  </body>
+</html>

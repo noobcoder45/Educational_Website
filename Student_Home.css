@@ -1,0 +1,42 @@
+
+/* subjects */
+
+.card{
+  width:18rem;
+  text-align: center;
+  position:relative;
+  transform: rotate(0);
+}
+
+.card-body{
+  padding:0;
+}
+
+.subjects{
+  align-items: center;
+  padding-left:150px;
+  padding-right:150px;
+}
+
+.subject_go{
+   display: block;
+   height:48px;
+   width:100%;
+   font-size:25px;
+   padding-bottom: 15px;
+   font-weight:bold;
+   background-color: black;
+}
+
+.More{
+  margin-top: 150px;
+  padding-left:100px;
+  padding-right:100px  ;
+  background-color: #F9F3EE;
+  height: 500px;
+
+}
+
+.card_body{
+  margin-top: 10px;
+}

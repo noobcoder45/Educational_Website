@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/registration.css">
+    <title>Signin</title>
+  </head>
+  <body>
+    <% if(admin){ %>
+    <form class="registration_form" action="/91515566012/register" method="post">
+    <input type="text" name="Name" placeholder="Name">
+    <br>
+    <input type="number" name="Phone" placeholder="Phone">
+    <br>
+    <label>Subjects you can teach:</label>
+    <br>
+    <select name="subjects" multiple>
+      <option value="maths">Maths</option>
+      <option value="physics">Physics</option>
+      <option value="chemistry">Chemistry</option>
+    </select>
+    <br>
+    <input type="email" name="Email" placeholder="Email">
+    <br>
+    <input type="password" name="Password" placeholder="Password">
+    <br>
+    <input type="password" name="Repassword" placeholder="Retype Password">
+    <br>
+    <input type="text" name="code" placeholder="invite code">
+    <br>
+    <button type="submit" name="button">Register</button>
+    </form>
+    <% }else{ %>
+      <div class="registration">
+      <form class="registration_form" action="/register" method="post">
+        <input class="input" type="text" name="Name" placeholder="Name">
+        <br>
+        <input class="input" type="number" name="Class" placeholder="Class">
+        <br>
+        <input class="input" type="number" name="Phone" placeholder="Phone">
+        <br>
+        <input class="input" type="text" name="College" placeholder="College">
+        <br>
+        <input class="input" type="email" name="Email" placeholder="Email">
+        <br>
+        <input class="input" type="password" name="Password" placeholder="Password">
+        <br>
+        <input class="input" type="password" name="Repassword" placeholder="Retype Password">
+        <br>
+        <input class="input" type="text" name="code" placeholder="invite code">
+        <br>
+        <button class="register_button" type="submit" name="button">Register</button>
+      </form>
+    </div>
+    <% } %>
+    <% if(incorrect){ %>
+      <p>passwords should match</p>
+    <% } %>
+  </body>
+</html>

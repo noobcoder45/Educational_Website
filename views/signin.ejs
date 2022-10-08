@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% if(admin){ %>
+      <form action="/91515566012/sign" method="post">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit" name="button">Sign in</button>
+        <p>Don't have an account?</p>
+      </form>
+        <form action="/91515566012/not_member" method="post">
+          <button type="submit" name="button">register</button>
+        </form>
+    <% }else{ %>
+    <form action="/sign" method="post">
+      <input type="email" name="email" placeholder="Email">
+      <input type="password" name="password" placeholder="Password">
+      <button type="submit" name="button">Sign in</button>
+      <p>Don't have an account?</p>
+    </form>
+      <form action="/not_member" method="post">
+        <button type="submit" name="button">register</button>
+      </form>
+    <% } %>
+    <% if(incorrect){ %>
+      <p>Password incorrect</p>
+    <% } %>
+  </body>
+</html>

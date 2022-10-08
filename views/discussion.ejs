@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+  <div class="">
+  <form  method="post" enctype="multipart/form-data" action= <%= "/post_doubt/"+id %>>
+    <form  id="form">
+      <label>Add image:</label>
+      <br>
+      <input type="file" id="file" name=<% "doubt" + name %> >
+      <br>
+       <input type="hidden" name="name" id="name" value=<%= name %>>
+      <select name="Subject" id="subject">
+        <option value="Maths">Maths</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+      </select>
+      <input type="text" name="chapter" id="chapter" placeholder="Chapter">
+      <select name="Type">
+        <option value="Problem">Problem</option>
+        <option value="Conceptual">Conceptual</option>
+        <option value="Other">other</option>
+      </select>
+      <br>
+      <label>Add description:</label>
+      <br>
+      <textarea name="description" id="description" rows="5" cols="30"></textarea>
+      <br>
+     <button type="submit">POST</button>
+   </form>
+ </div>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxother people doubtsxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+< <div class="">
+  <ul class="list-group">
+    <%  doubts.forEach(function(doubt){ %>
+    <li class="list-group-item">
+      <div>
+        <h3><%= doubt.asker %></h3>
+        <h3><%= doubt.Subject %></h3>
+        <h3><%= doubt.Chapter %></h3>
+        <h3><%= doubt.type %></h3>
+        <h3><%= doubt.description %></h3>
+        <form action=<%= "/go_to_doubt/"+id %> method="post">
+          <input type="hidden" name="description" value=<%= doubt.description %> />
+          <input type="hidden" name="route" value=<%= doubt.route %> />
+         <button type="submit">Look up</button>
+        <% if(doubt.asker===name){ %>
+          <form action=<%= "/delete_doubt/"+id %> method="post">
+           <button type="submit">Delete</button>
+          </form>
+        <% } %>
+      </div>
+    </li>
+    <% }) %>
+  </ul>
+</div>
+<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+  </body>
+</html>
