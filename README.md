@@ -13,7 +13,12 @@
 
 To setting up the project locally
 To get a local copy up and running follow these simple example steps.
-
+Install Node.js
+After installing Node, run the following commands
+  ```sh
+  npm init
+  npm install express mongoose body-parser fs ejs multer nodemon
+  ```
 ### Setting up the database
 Running the the MongoDB data base.
   ```sh
@@ -25,9 +30,9 @@ Note:Keep the mongod server running
 
 Use this command in a sepreate temrinal to start the server.
   ```sh
-  Node app.js
+  nodemon app.js
   ```
-Note:If the server runs into a problem restart the server with the same command.
+Note:If the server runs into a problem restart the server by rs
 <!-- USAGE EXAMPLES -->
 ## Usage
   <ol>
